@@ -1,9 +1,6 @@
-<h1>The triangle you have is:</h1>
+<h1>The volume of your parcel is:</h1>
 
-<% if @triangle.triangle?() %>
-  <h5>It is a triangle!</h5>
-<% else %>
-  <h5>It is not a triangle!</h5>
-<% end %>
+<%= @parcels.volume() %>
 
-<%= @triangle.type() %>
+<h1>The total cost of your parcel is:</h1>
+<%= @parcels.cost_to_ship(delivery_type, distance) %>
